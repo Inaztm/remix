@@ -16,7 +16,7 @@ function ArticleCard({ item }: ArticleCardProps) {
       {realItem && <img src={realItem?.cover} />}
       <div>
         { realItem && <><h3 className="font-bold">{realItem?.title}</h3><h4 className="text-sm">{realItem?.description}</h4></> }
-        { !realItem && 'No data' }
+        { !realItem && 'No data1' }
       </div>
     </div>
   );
