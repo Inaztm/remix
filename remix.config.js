@@ -1,5 +1,7 @@
+const withBuilderDevTools = require("@builder.io/dev-tools/remix")();
+
 /** @type {import('@remix-run/dev').AppConfig} */
-module.exports = {
+module.exports = withBuilderDevTools({
   future: {
     v2_dev: true,
     v2_errorBoundary: true,
@@ -10,8 +12,9 @@ module.exports = {
   },
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "cjs",
+  tailwind: true,
   // appDirectory: "app",
   // assetsBuildDirectory: "public/build",
   // serverBuildPath: "build/index.js",
   // publicPath: "/build/",
-};
+});
